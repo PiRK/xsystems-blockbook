@@ -9,7 +9,7 @@ ENV PACKAGER="0:0" \
     VERSION="${BLOCKBOOK_VERSION}"
 
 RUN git clone https://github.com/trezor/blockbook.git /src \
- && (cd /src && git checkout "tags/${BLOCKBOOK_VERSION}" -b "release/${BLOCKBOOK_VERSION}") \
+ && (cd /src && git checkout "${BLOCKBOOK_VERSION}" -b "release/${BLOCKBOOK_VERSION}") \
  && make build
 
 

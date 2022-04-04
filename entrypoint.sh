@@ -23,7 +23,7 @@ envsubst < /blockbook/blockchaincfg-template.json > /blockbook/blockchaincfg.jso
 
 exec /blockbook/bin/blockbook   -blockchaincfg=/blockbook/blockchaincfg.json \
                                 -sync \
-                                -internal=:9030 \
-                                -public=:9130 \
+                                -internal=:9097 \
+                                -public=:9197 \
                                 -logtostderr \
                                 "$@"
