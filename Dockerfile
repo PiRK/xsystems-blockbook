@@ -15,8 +15,10 @@ RUN git clone https://github.com/trezor/blockbook.git /src \
 
 FROM ${BASE_IMAGE}
 
+# ca-certificates is required for Go to check CA certs when calling the coingecko API.
 RUN apt-get update \
  && apt-get install -y \
+        ca-certificates \
         gettext-base \
         libsnappy1v5 \
         libzmq5 \
